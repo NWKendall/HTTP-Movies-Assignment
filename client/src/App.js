@@ -19,8 +19,9 @@ const App = () => {
         path="/movies/:id"
         render={props => {
           return <Movie {...props} addToSavedList={addToSavedList} />;
-        }}
+        }}  
       />
+      <Route exact path ="/update-movie/:id" />
     </>
   );
 };
