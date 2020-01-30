@@ -51,7 +51,7 @@ function MovieDetails({ movie }) {
 function MovieBar({ movie }) {
   return (
     <div>
-      <Link to={`/update-form/${movie.id}`}>
+      <Link to={`/update-movie/${movie.id}`}>
       </Link>
     </div>
   )

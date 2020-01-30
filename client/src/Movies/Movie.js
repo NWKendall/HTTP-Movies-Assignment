@@ -35,9 +35,9 @@ export default class Movie extends React.Component {
     addToSavedList(this.state.movie);
   };
 
- handleUpdate = e => { // working
-    e.preventDefault();
-    this.props.history.push(`/update-form/${this.state.movie.id}`)
+ handleUpdate = movie => { // needs to setState for updateMovie function????
+    this.props.movieToEdit(movie);
+    this.props.history.push(`/update-movie/${this.state.movie.id}`)
   }
 
   render() {
@@ -51,7 +51,7 @@ export default class Movie extends React.Component {
         <div className="save-button" onClick={this.saveMovie}>
           Save
         </div>
-        <div className="edit-button" onClick={this.handleUpdate}>
+        <div className="edit-button" onClick={() => this.handleUpdate(this.state.movie)}>
           Edit
         </div>
       </div>
