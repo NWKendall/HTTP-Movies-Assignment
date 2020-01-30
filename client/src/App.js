@@ -13,6 +13,9 @@ const App = () => {
     setCurrentMovie(movie)
 }
 
+const movieToDelete = movie => {
+  setCurrentMovie(movie)
+}
 
   const addToSavedList = movie => {
     setSavedList([...savedList, movie]);
@@ -32,6 +35,7 @@ const App = () => {
           return <Movie {...props} 
           addToSavedList={addToSavedList} 
           movieToEdit={movieToEdit}
+          movieToDelete={movieToDelete}
  />;
         }}  
       />
